@@ -5,3 +5,4 @@ RUN /bin/herokuish buildpack install \
 	&& ln -s /bin/herokuish /build \
 	&& ln -s /bin/herokuish /start \
 	&& ln -s /bin/herokuish /exec
+RUN sed -i '/apt.postgresql.org/d' /etc/apt/sources.list
